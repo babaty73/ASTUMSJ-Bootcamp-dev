@@ -1,0 +1,158 @@
+/* Base Reset and Typography Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+   /* background-color: #ffb7c5; /* Main soft pink tone matched from Figma mockup */
+   /* background-image: url('assets/bunny.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Stretches pattern to fill screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Responsive Container Block */
+.todo-container {
+    background-color: rgba(255, 255, 255, 0.45); 
+    width: 100%;
+    max-width: 550px;
+    border-radius: 30px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+    text-align: center;
+    position: relative;
+}
+
+.todo-title {
+    color: #b33951;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+.input-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.todo-input {
+    width: 100%;
+    padding: 15px 60px 15px 25px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #aa6c79;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.todo-input::placeholder {
+    color: #e5b3bb;
+}
+
+.todo-input:focus {
+    outline: 2px solid #e5a4b0;
+}
+
+.add-btn {
+    position: absolute;
+    right: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    border: none;
+    background-color: #ffffff;
+    color: #e5a4b0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+.success-message {
+    font-size: 0.85rem;
+    color: #b33951;
+    font-weight: 500;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 12px 25px;
+    border-radius: 50px;
+}
+
+.task-text {
+    color: #b33951;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+
+.task-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-icon {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.bunny-mascot {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.bunny-mascot img {
+    max-width: 80px;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .todo-container {
+        padding: 30px 20px;
+        max-width: 100%;
+        border-radius: 24px;
+    }
+
+    .todo-title {
+        font-size: 1.6rem;
+    }
+
+    .task-text {
+        font-size: 0.95rem;
+    }
+}

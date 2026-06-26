@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Todo List</title>
+    <!-- Google Fonts for a clean, friendly font look -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">*/
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1 class="todo-title">Kawaii TodoList</h1>
+        
+        <!-- Input Field Container -->
+        <div class="input-container">
+            <input type="text" placeholder="Add your task" class="todo-input">
+            <button class="add-btn">+</button>
+        </div>
+
+        <!-- Success Notification -->
+        <div class="success-message">Tasks added successfully.</div>
+
+        <!-- Task List Container -->
+        <div class="task-list">
+            <!-- Task Item 1 -->
+            <div class="task-item">
+                <span class="task-text">Go to market.</span>
+                <div class="task-actions">
+                    <span class="action-icon edit-icon">✏️</span>
+                    <span class="action-icon delete-icon">❌</span>
+                </div>
+            </div>
+            <!-- Task Item 2 -->
+            <div class="task-item">
+                <span class="task-text">to practice code</span>
+                <div class="task-actions">
+                    <span class="action-icon edit-icon">✏️</span>
+                    <span class="action-icon delete-icon">❌</span>
+                </div>
+            </div>
+            <!-- Task Item 3 -->
+            <div class="task-item">
+                <span class="task-text">to learn new hadith</span>
+                <div class="task-actions">
+                    <span class="action-icon edit-icon">✏️</span>
+                    <span class="action-icon delete-icon">❌</span>
+                </div>
+            </div>
+            <!-- Task Item 4 -->
+            <div class="task-item">
+                <span class="task-text">to learn arabic</span>
+                <div class="task-actions">
+                    <span class="action-icon edit-icon">✏️</span>
+                    <span class="action-icon delete-icon">❌</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional Mascot Placement Holder -->
+        <div class="bunny-mascot">
+            <!-- Replace source path with your local assets path later if needed -->
+            <img src="assets/bunny.png" alt="Cute Bunny" onerror="this.style.display='none'">
+        </div>
+    </div>
+</body>
+</html>
