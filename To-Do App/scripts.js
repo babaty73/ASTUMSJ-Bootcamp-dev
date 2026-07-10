@@ -28,7 +28,6 @@ clearBtn.addEventListener("click", () => {
 
 colorCircles.forEach(circle => {
   circle.addEventListener("click", () => {
-    // Remove active class from previous circle, add to this one
     document.querySelector(".color-circle.active")?.classList.remove("active");
     circle.classList.add("active");
 
@@ -44,7 +43,7 @@ function handleAddTask() {
   const taskText = taskInput.value.trim();
 
   if (taskText === "") {
-    errorMsg.textContent = "⚠️ Please type a task first!";
+    errorMsg.textContent = " Please type a task first!";
     return;
   }
 
@@ -71,7 +70,7 @@ function createTaskElement(text, isCompleted) {
 
   const doneBtn = document.createElement("button");
   doneBtn.className = "done-btn";
-  doneBtn.textContent = "✓ Done";
+  doneBtn.textContent = "Done";
   doneBtn.addEventListener("click", () => {
     li.classList.toggle("done");
     saveTasksToStorage();
@@ -127,7 +126,8 @@ function loadTasks() {
   const savedTasks = JSON.parse(localStorage.getItem("myTodoList")) || [];
   savedTasks.forEach(task => {
     createTaskElement(task.text, task.completed);
-  })
+  });
+}
 
 function loadBackgroundColor() {
   const savedColor = localStorage.getItem("todoBgColor");
@@ -139,4 +139,4 @@ function loadBackgroundColor() {
     const matchingCircle = Array.from(colorCircles).find(c => c.dataset.color === savedColor);
     if (matchingCircle) matchingCircle.classList.add("active");
   }
-}}
+}
