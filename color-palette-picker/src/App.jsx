@@ -1,5 +1,7 @@
 import { useState } from "react";
-
+import ColorButton from "./components/ColorButton";
+import ColorPreview from "./components/ColorPreview";
+import Card from "./components/Card";
 import "./index.css";
 
 function App() {
@@ -17,27 +19,34 @@ function App() {
   const [selectedColor, setSelectedColor] = useState("");
 
   return (
-    <div className="App">
-      <h1>Color Palette Picker</h1>
-      <div className="color-options">
-        {colors.map((color) => (
-          <button
-            key={color}
-            className={`color-button ${selectedColor === color ? "selected" : ""}`}
-            style={{ backgroundColor: color.toLowerCase() }}
-            onClick={() => setSelectedColor(color)}
-          >
-            {color}
-          </button>
-        ))}
-      </div>
-      <div className="selected-color">
-        {selectedColor && (
-          <p>
-            Selected Color: <span style={{ color: selectedColor.toLowerCase() }}>{selectedColor}</span>
-          </p>
+    <div className="app">
+      <Card>
+        <h1>🎨 Color Palette Picker</h1>
+
+        <div className="button-container">
+          {colors.map((color) => (
+            <ColorButton
+              key={color}
+              color={color}
+              isSelected={selectedColor === color}
+              onClick={() => setSelectedColor(color)}
+            />
+          ))}
+        </div>
+
+        {selectedColor ? (
+          <ColorPreview color={selectedColor} />
+        ) : (
+          <p className="placeholder">No color selected yet.</p>
         )}
-      </div>
+
+        <button
+          className="reset-btn"
+          onClick={() => setSelectedColor("")}
+        >
+          Reset
+        </button>
+      </Card>
     </div>
   );
 }
