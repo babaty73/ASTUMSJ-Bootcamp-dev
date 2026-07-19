@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 
 function BlogCard({ post }) {
   return (
-    <Link
-      to={`/blog/${post.id}`}
-      className="bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 block"
-    >
+    <div className="bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
       <h2 className="text-xl font-bold mb-4">
         {post.title}
       </h2>
@@ -26,11 +23,18 @@ function BlogCard({ post }) {
       </div>
 
       {post.reactions?.likes && (
-        <p className="text-sm text-gray-500">
-            👍 {post.reactions.likes} Likes
+        <p className="text-sm text-gray-500 mb-5">
+          👍 {post.reactions.likes} Likes
         </p>
       )}
-    </Link>
+
+      <Link
+        to={`/blog/${post.id}`}
+        className="inline-block bg-blue-500 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-600 transition"
+      >
+        Read More 
+      </Link>
+    </div>
   );
 }
 
