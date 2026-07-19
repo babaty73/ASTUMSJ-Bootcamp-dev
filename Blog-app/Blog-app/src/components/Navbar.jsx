@@ -1,25 +1,30 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const linkStyle = ({ isActive }) =>
+    isActive
+      ? "text-blue-400 font-semibold"
+      : "text-gray-300 hover:text-white transition";
+
   return (
-    <nav className="bg-blue-600 text-white shadow-md">
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-        <Link to="/" className="text-2xl font-bold">
+    <nav className="bg-gray-900 shadow-md">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <h1 className="text-2xl font-bold text-white">
           Blog App
-        </Link>
+        </h1>
 
-        <div className="flex gap-6">
-          <Link to="/" className="hover:text-gray-200">
+        <div className="flex gap-8">
+          <NavLink to="/" className={linkStyle}>
             Home
-          </Link>
+          </NavLink>
 
-          <Link to="/create" className="hover:text-gray-200">
-            Create Post
-          </Link>
+          <NavLink to="/create" className={linkStyle}>
+            Create
+          </NavLink>
 
-          <Link to="/bookmarks" className="hover:text-gray-200">
+          <NavLink to="/bookmarks" className={linkStyle}>
             Bookmarks
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>

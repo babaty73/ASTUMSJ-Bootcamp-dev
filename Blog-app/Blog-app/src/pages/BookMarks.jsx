@@ -7,9 +7,15 @@ function Bookmarks() {
 
   if (bookmarks.length === 0) {
     return (
-      <h1 className="text-center text-2xl">
-        No bookmarks yet.
-      </h1>
+      <div className="text-center mt-24">
+    <h1 className="text-4xl font-bold">
+        No Bookmarks
+    </h1>
+
+    <p className="text-gray-500 mt-3">
+        Save your favorite posts to read later.
+    </p>
+</div>
     );
   }
 
