@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1><i class="fas fa-tasks"></i> Task Manager</h1>
+      <span class="badge">ASTU · Mini Project</span>
+    </header>
+
+    <div class="card">
+      <form id="addTaskForm" class="add-task-form">
+        <div class="form-group">
+          <label for="taskTitle"><i class="fas fa-pen"></i> Title</label>
+          <input type="text" id="taskTitle" placeholder="Write a task..." required>
+        </div>
+        <div class="form-group">
+          <label for="taskPriority"><i class="fas fa-flag"></i> Priority</label>
+          <select id="taskPriority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+        <button type="submit" class="btn"><i class="fas fa-plus"></i> Add Task</button>
+      </form>
+    </div>
+
+    <div class="card" style="padding: 1rem 1.8rem;">
+      <div class="filter-bar">
+        <div><i class="fas fa-filter"></i> Filter by priority:</div>
+        <select id="filterPriority">
+          <option value="all">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="refreshBtn" class="btn btn-outline"><i class="fas fa-sync-alt"></i> Refresh</button>
+      </div>
+    </div>
+
+    <div id="taskContainer" class="task-grid"></div>
+    <div class="footer">⚡ REST API · CRUD · MVC · CORS · .env</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
