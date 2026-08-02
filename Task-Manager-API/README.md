@@ -6,6 +6,25 @@ A simple task management REST API with a small frontend interface for creating, 
 
 - `backend/` - Express.js API server
 - `frontend/` - Static frontend UI for the task manager
+- task-manager-api/
+├──`backend/`
+│   ├── .env
+│   ├── index.js
+│   ├── config/
+│   │   └── env.js
+│   ├── data/
+│   │   └── taskData.js
+│   ├── services/
+│   │   └── taskService.js
+│   ├── controllers/
+│   │   └── taskController.js
+│   └── routes/
+│       └── taskRoutes.js
+├── `frontend/`
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+└── README.md
 
 ## Features
 
