@@ -63,9 +63,13 @@ function App() {
           />
 
           <Route
-            path="/blog/:id"
-            element={<BlogDetails />}
-          />
+  path="/blog/:id"
+  element={
+    <BlogDetails
+      posts={posts}
+    />
+  }
+/>
 
           <Route
             path="/bookmarks"

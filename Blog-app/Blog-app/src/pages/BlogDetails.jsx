@@ -69,15 +69,21 @@ function BlogDetails() {
         </p>
 
         <div className="flex flex-wrap gap-2 mb-6">
-          {post.tags.map((tag) => (
-            <span
-              key={tag}
-              className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
-            >
-              #{tag}
-            </span>
-          ))}
-        </div>
+  {post.tags?.length > 0 ? (
+    post.tags.map((tag) => (
+      <span
+        key={tag}
+        className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
+      >
+        #{tag}
+      </span>
+    ))
+  ) : (
+    <span className="text-gray-500">
+      No tags
+    </span>
+  )}
+</div>
 
         <button
           onClick={handleBookmark}

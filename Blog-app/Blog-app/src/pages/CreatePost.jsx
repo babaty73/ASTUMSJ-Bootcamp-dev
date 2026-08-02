@@ -5,7 +5,17 @@ function CreatePost({ posts, setPosts }) {
   const navigate = useNavigate();
 
   function handleCreate(post) {
-    setPosts([post, ...posts]);
+    const newPost = {
+      ...post,
+      id: Date.now(),
+      tags: post.tags || [],
+      reactions: {
+        likes: 0,
+      },
+      comments: [],
+    };
+
+    setPosts([newPost, ...posts]);
 
     navigate("/");
   }
