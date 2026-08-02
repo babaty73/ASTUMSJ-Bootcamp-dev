@@ -204,7 +204,7 @@ if (addForm) {
       setStatus('Task added successfully.', 'success', true);
       await loadTasks();
     } else {
-      setStatus('Failed to add task. Check the API server.', 'error');
+      setStatus('Failed to add task.', 'error');
     }
   });
 }
