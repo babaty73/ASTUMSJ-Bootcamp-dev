@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const Settings = () => {
   const [events, setEvents] = useState(true);

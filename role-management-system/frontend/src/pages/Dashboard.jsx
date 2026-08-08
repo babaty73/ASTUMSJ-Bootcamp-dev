@@ -1,4 +1,5 @@
 import React from 'react';
+import { CalendarDays } from 'lucide-react';
 
 export const Dashboard = () => {
   const cards = [
@@ -20,7 +21,8 @@ export const Dashboard = () => {
             <h3 className="text-xs font-bold tracking-widest uppercase opacity-80">Upcoming Event</h3>
             <p className="text-xl font-extrabold leading-snug tracking-tight">Cross-division knowledge-sharing</p>
           </div>
-          <button className="mt-6 self-start px-6 py-3 bg-[#0b3994] text-white text-xs font-bold rounded-xl shadow-md transition-all hover:bg-opacity-90">
+          <button className="mt-6 self-start px-6 py-3 bg-[#0b3994] text-white text-xs font-bold rounded-xl shadow-md transition-all hover:bg-opacity-90 flex items-center gap-2">
+            <CalendarDays className="w-4 h-4" />
             Add to calendar
           </button>
         </div>
@@ -68,7 +70,7 @@ export const Dashboard = () => {
         <div className="flex justify-between items-center">
           <h3 className="font-extrabold text-base tracking-tight text-[#0f172a]">Session</h3>
           <button className="p-2 bg-[#f8fafc] border border-[#e2e8f0] rounded-xl text-[#64748b]">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <CalendarDays className="w-4 h-4" />
           </button>
         </div>
 
